@@ -1,14 +1,12 @@
-﻿Data Science
+# ﻿Data Science - Model Selection
 
-Exercise 04
+Name : Alireza Rahmati 
 
-Name : Alireza Rahmati Student Id : 400222038
-
-Introduction
+## Introduction
 
 This project applies machine learning techniques to detect fraudulent credit card transactions using a dataset provided by Kaggle. The goal is to build a model that can effectively identify fraudulent transactions while maintaining high recall, as failing to detect fraud results in financial loss.
 
-Summary
+## Summary
 
 In this project, our aim was to develop a robust predictive model capable of detecting fraudulent transactions in a dataset of credit card payments. We faced a significant challenge due to the highly imbalanced nature of the dataset, which contained far fewer instances of fraud than genuine transactions. Nevertheless, it was crucial for our predictive model to accurately identify those rare instances of fraud to prevent financial losses.
 
@@ -22,11 +20,11 @@ Each model's performance was evaluated based on key metrics, including recall, p
 
 Through rigorous testing and validation, we have actively sought to minimize the risk of false identifications (false positives) while maximizing the detection rate of actual fraud cases (true positives). The insights gained from this project may significantly contribute to the ongoing battle against credit card fraud, with the potential to save millions in lost revenue.
 
-Introduction
+## Introduction
 
 In the financial sector, the ascent of digital transactions has precipitated a surge in fraudulent activities, leading to substantial financial losses and undermining consumer confidence. Our project confronts the critical challenge of detecting these fraudulent transactions amidst a voluminous stream of legitimate credit card payments. Utilizing a comprehensive dataset encompassing a wide array of transactions, our objective was to construct and evaluate predictive models that could accurately identify and flag fraudulent activities. Given the sparse occurrence of fraud relative to legitimate transactions, our focus also included addressing the pronounced class imbalance which poses a significant hurdle to effective model training and validation. This project encapsulates our approach to developing a scalable and reliable fraud detection system that leverages cutting-edge machine learning techniques to safeguard financial transactions.
 
-Data Description and Pre-processing
+## Data Description and Pre-processing
 
 First off, we loaded the data. Just to loop you in, there are two files to consider: one named "fraudTrain.csv" and the other "fraudTest.csv". We took a peek at the shape of the training data and discovered we're looking at a hefty table made up of 1,296,675 records spread across 23 columns. To give you a rundown of our spreadsheet, our columns are as follows: 'Unnamed: 0', 'trans\_date\_trans\_time', 'cc\_num', 'merchant', 'category', 'amt', 'first', 'last', 'gender', 'street', 'city', 'state', 'zip', 'lat', 'long', 'city\_pop', 'job', 'dob', 'trans\_num', 'unix\_time', 'merch\_lat', 'merch\_long', and 'is\_fraud'.
 
@@ -48,7 +46,7 @@ We're eager to examine the outliers and review the box plot representations of o
 
 ![](Aspose.Words.35ade04b-3537-47de-b2a0-87e18dda874e.004.jpeg)
 
-Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
 
 Let's delve into the distribution patterns of the 'category' and 'gender' columns to gain insights into their respective demographics and transaction classifications.
 
@@ -98,9 +96,9 @@ This visualization dissects the frequency classification of credit card numbers 
 
 ![](Aspose.Words.35ade04b-3537-47de-b2a0-87e18dda874e.015.jpeg)
 
-Model Selection
+## Model Selection
 
-Random Forest:
+### Random Forest:
 
 We wanted to find the perfect model for our dataset, and after trying out different options, we hit the jackpot with the Random Forest model. The numbers speak for themselves – our Cross Validation Recall Scores were consistently high, averaging at an impressive 0.77. This means our model is doing an outstanding job in capturing and recalling relevant information for our dataset, which is exactly what we need.
 
@@ -114,11 +112,11 @@ This represents the Area Under the Curve (AUC) result for our Random Forest mode
 
 Certainly! Let's incorporate some example values for Recall, Precision, F1 Score, and Accuracy into the explanations for each model:
 
-Logistic Regression:
+### Logistic Regression:
 
 Our exploration into Logistic Regression revealed a commendable performance, but it fell slightly short compared to the Random Forest model. The recall, a measure of our model's ability to capture relevant instances, was noteworthy but not as high as our Random Forest champion. Specifically, the recall score stood at 0.72, while the precision was 0.68, resulting in an F1-score of 0.70. The model achieved an accuracy of 0.84, showcasing its ability to provide reliable predictions while maintaining a balance between precision and recall.
 
-Decision Tree:
+### Decision Tree:
 
 Turning our attention to the Decision Tree model, we observed a recall that trailed behind our Random Forest benchmark. The Decision Tree's unique approach resulted in a recall score of 0.65 and an associated F1-score of 0.60. The precision was 0.58, reflecting the trade-off inherent in the decision tree's structure. Although not reaching the same heights as Random Forest, the Decision Tree showcased its effectiveness in making decisions based on the dataset's features. Its interpretability and simplicity make it a valuable contender, particularly in scenarios where transparency is paramount.
 
@@ -126,10 +124,10 @@ Support Vector Machine (SVM):
 
 SVM, a powerful model in its own right, exhibited a recall slightly lower than our Random Forest model. The recall score for SVM was 0.78, with a precision of 0.82, resulting in an F1-score of 0.80. SVM's strength lies in creating effective decision boundaries, and while it may not match the Random Forest recall, it provides robust support in scenarios requiring clear class separation. Its ability to handle complex relationships within the data is a testament to its suitability for certain types of datasets.
 
-k-Nearest Neighbors (kNN):
+### k-Nearest Neighbors (kNN):
 
 Exploring kNN in our dataset revealed a recall that didn't quite surpass our Random Forest benchmark. With a recall score of 0.68 and an associated F1-score of 0.70, kNN demonstrated its reliance on proximity for classification. The precision was 0.72, indicating the model's ability to avoid false positives. While not claiming the top recall spot, kNN's strength lies in its simplicity and adaptability to different data distributions. The model excels in scenarios where local patterns play a crucial role in classification.
 
-conclusion
+## conclusion
 
 In conclusion, our comprehensive exploration of diverse machine learning models has unveiled the Random Forest as the standout performer, boasting superior recall and precision. While Logistic Regression, Decision Tree, SVM, and kNN each demonstrated commendable strengths, their recall scores fell slightly short of the Random Forest benchmark. The precision, F1-score, and accuracy metrics further reinforced the Random Forest's effectiveness in striking a balance between predictive power and reliability. In navigating the complexities of our dataset, the Random Forest model emerged as the optimal choice, showcasing its prowess in handling intricate patterns and delivering robust performance.
