@@ -2,8 +2,6 @@
 
 Name : Alireza Rahmati 
 
-## Introduction
-
 This project applies machine learning techniques to detect fraudulent credit card transactions using a dataset provided by Kaggle. The goal is to build a model that can effectively identify fraudulent transactions while maintaining high recall, as failing to detect fraud results in financial loss.
 
 ## Summary
